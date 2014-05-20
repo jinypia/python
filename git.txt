@@ -13,3 +13,7 @@ git push -u origin master
 git remote add origin https://github.com/jinypia/python.git
 git push -u origin master
 
+# commit
+git add *
+git commit -m "explanation of the reason of this version"
+
