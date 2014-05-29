@@ -1,28 +1,22 @@
 # coding... 
 
-def d():
+def d(num):
 	'''
 	d(91) = 9 + 1 + 91 = 101
 	1+0+0+100=101
+	generator = 91
 	'''
+	val = 0
+	if num >= 10:
+		val = val + num
+	for i in str(num):
+		val += int(i)
+	return val
 
-	numlst = []
-	genlst = []
-	duplst = []
-	for i in range(1,91):
-		numlst.append(i)
-		a = str(i)
-		gen = 0
-		for j in a:
-			gen += int(j)
-		gen += i
-		if not gen in genlst:
-			genlst.append(gen)
-			numlst.append(i)
-		else:
-			duplst.append(i)
-			numlst.remove(i)
-	print genlst
-	print duplst
+gen = {}
+for i in range(1,31):
+	gen[i] = d(i)
 
-d()
+print gen
+
+
